@@ -1,0 +1,6 @@
+openai>=1.0
+tiktoken
+aiofiles
+numpy
+faiss-cpu
+tqdm
