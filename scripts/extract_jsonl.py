@@ -1,5 +1,4 @@
 """
-scripts/extract_jsonl.py
 ------------------------
 Walk the mathlib source tree, parse every `.lean` file with
 `src.extract.gather_decls`, and write a JSONL dataset suitable for the
