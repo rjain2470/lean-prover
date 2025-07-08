@@ -1,6 +1,6 @@
-openai>=1.0
-tiktoken
-aiofiles
-numpy
-faiss-cpu
-tqdm
+openai==1.6.1
+tiktoken==0.5.1
+aiofiles==23.2.1
+numpy==1.26.4
+faiss-cpu==1.7.4
+tqdm==4.66.2
