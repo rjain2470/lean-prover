@@ -60,10 +60,12 @@ def k_nearest(query: str, k: int = 15):
 
     return valid_results
 
-# ----------------- EXAMPLE USAGE --------------------------------------
-# This says that if a relation r is symmetric, XrY = YrX
-k = 10
-example = k_nearest("Symmetric r → swap r = r", k)
-for name, dist in example: # Print k nearest neighbors
-    print(f"{dist:6.3f}  {name}")
-# ----------------------------------------------------------------------
+
+if __name__ == "__main__":
+    # ----------------- EXAMPLE USAGE ----------------------------------
+    # This says that if a relation r is symmetric, XrY = YrX
+    k = 10
+    example = k_nearest("Symmetric r → swap r = r", k)
+    for name, dist in example:  # Print k nearest neighbors
+        print(f"{dist:6.3f}  {name}")
+    # ------------------------------------------------------------------
