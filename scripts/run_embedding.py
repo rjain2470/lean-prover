@@ -99,5 +99,6 @@ async def main() -> None:
     print(f"Embedding complete. Wrote {VEC_PATH} ({size_mb:.1f} MB)")
 
 
-# run in current event loop (works in notebooks)
-await main()
+# run from the command line
+if __name__ == "__main__":
+    asyncio.run(main())
