@@ -45,7 +45,7 @@ theorem statement : ∀ n m : ℕ, n + m = m + n := by
 ```
 
 ### Installation ✨
-The required libraries to use the <code>lean-prover</code> are as follows.
+The required libraries to use the <code>lean-prover</code> are as follows:
 - argparse
 - asyncio
 - json
