@@ -4,7 +4,7 @@
 A Retrieval Augmented Generation (RAG) stack built atop DeepSeek-Prover-V2 7B, a lightweight LLM designed to produce formalized proofs of mathematical statements in Lean.
 
 ## About The Project 📝
-We import the full contents of mathlib4, a massive collection of formalized proofs in Lean, and use the <code>ltext-embedding-3-large</code> model to textually embed these statements into Euclidean space. Then, given a theorem statement T in Lean inputted by the user, we append T to our textual embedding and retrieve its k nearest neighors, where k is a hyperparameter. Finally, a prompt asking DeepSeek Prover v2 7B to prove T including the k nearest neighbors is automatically generated and inputted, and the output is retrieved and outputted for the user.
+We import the full contents of mathlib4, a massive collection of formalized proofs in Lean, and use OpenAI's <code>text-embedding-3-large</code> model to textually embed these statements into Euclidean space. Then, given a theorem statement T in Lean inputted by the user, we append T to our textual embedding and retrieve its k nearest neighors, where k is a hyperparameter. Finally, a prompt asking DeepSeek Prover v2 7B to prove T including the k nearest neighbors is automatically generated and inputted, and the output is retrieved and outputted for the user.
 
 ## Example 🚀
 Suppose we want to prove that addition of natural numbers is commutative. Then, as a user, we could input the following:
