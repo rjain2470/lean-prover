@@ -58,7 +58,7 @@ The required libraries to use the <code>lean-prover</code> are as follows.
 - typing
 - __future__.
 
-You must additionally install the following libraries using <code>pip install</code>:
+You must additionally install and import the following libraries using <code>!pip install</code>:
 - aiofiles
 - numpy
 - openai
