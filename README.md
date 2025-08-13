@@ -56,7 +56,7 @@ The required libraries to use the <code>lean-prover</code> are as follows.
 - sys
 - time
 - typing
-- __future__.
+- \_\_future\_\_.
 
 You must additionally install and import the following libraries using <code>!pip install</code>:
 - aiofiles
