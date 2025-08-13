@@ -11,7 +11,7 @@ Suppose we want to prove that addition of natural numbers is commutative. Then, 
 ```lean4
 ∀ n m : ℕ, n + m = m + n
 ```
-Setting k = 5, this query is be embedded using our textual embedder and transformed into the following prompt:
+Setting k = 5, this query is embedded using our textual embedder and transformed into the following prompt:
 ```
 You are an expert Lean 4 code generator. Your goal is to prove the following statement:
 STATEMENT:
