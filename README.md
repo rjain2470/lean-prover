@@ -1,4 +1,4 @@
-# Lean-prover ✨
+# Lean-prover :zap:
 
 
 A Retrieval Augmented Generation (RAG) stack built atop DeepSeek-Prover-V2 7B, a lightweight LLM designed to produce formalized proofs of mathematical statements in Lean.
