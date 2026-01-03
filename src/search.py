@@ -26,8 +26,15 @@ MODEL       = "text-embedding-3-large"             # embedding model name
 INDEX_PATH  = "datasets/mathlib4_hnsw.faiss"       # FAISS index on disk
 NAMES_PATH  = "datasets/mathlib4_hnsw.names.npy"   # row-id → Lean name
 
-index = faiss.read_index(INDEX_PATH)               # load index into RAM
-names = np.load(NAMES_PATH)                        # parallel name array
+_index = None
+_names = None
+
+def _load_index():
+    global _index, _names
+    if _index is None:
+        _index = faiss.read_index(INDEX_PATH)
+        _names = np.load(NAMES_PATH)
+    return _index, _names
 
 
 def embed(text: str) -> np.ndarray:
@@ -50,12 +57,11 @@ def k_nearest(query: str, k: int = 15):
     Distance = 2 * (1 - CS). A distance of 0 means perfect similarity (CS=1).
     The distance is effectively bounded between 0 and 2 in this application.
     """
+    index, names = _load_index()
     q = embed(query).reshape(1, -1)
-    faiss.normalize_L2(q) # Normalize the query vector
+    faiss.normalize_L2(q)
     D, I = index.search(q, k)
-    # D contains squared Euclidean distances on L2-normalized vectors
 
-    # Filter out results where the index is -1 (invalid results)
     valid_results = [(names[int(i)], float(D[0][j])) for j, i in enumerate(I[0]) if i != -1]
 
     return valid_results
