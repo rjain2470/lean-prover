@@ -1,5 +1,4 @@
-# Lean-prover :zap:
-
+# RAG-prover :zap:
 
 A Retrieval Augmented Generation (RAG) stack built atop DeepSeek-Prover-V2 7B, a lightweight LLM designed to produce formalized proofs of mathematical statements in Lean.
 
@@ -45,7 +44,7 @@ theorem statement : ∀ n m : ℕ, n + m = m + n := by
 ```
 
 ### Installation ✨
-The required libraries to use the <code>lean-prover</code> are as follows:
+The required libraries to use <code>RAG-prover</code> are as follows:
 - argparse
 - asyncio
 - json
