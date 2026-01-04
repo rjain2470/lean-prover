@@ -44,27 +44,60 @@ theorem statement : ∀ n m : ℕ, n + m = m + n := by
 ```
 
 ### Installation ✨
-The required libraries to use <code>RAG-prover</code> are as follows:
-- argparse
-- asyncio
-- json
-- logging
-- os
-- pathlib
-- re
-- sys
-- time
-- typing
-- \_\_future\_\_.
 
-You must additionally install and import the following libraries using <code>!pip install</code>:
+#### Option 1: Install from Source (Recommended for Development)
+
+1. Clone the repository:
+```bash
+git clone https://github.com/rjain2470/rag-prover.git
+cd rag-prover
+```
+
+2. Install the package:
+```bash
+pip install .
+```
+
+#### Option 2: Install in Editable Mode (for Development)
+```bash
+pip install -e .
+```
+
+The package will install all required dependencies automatically, including:
 - aiofiles
 - numpy
 - openai
 - tiktoken
 - torch
 - tqdm
-- transformers.
+- transformers
+- matplotlib
+- faiss-cpu
+
+### Using RAG-Prover in Jupyter Notebooks 📓
+
+After installation, you can import and use RAG-Prover in Jupyter Notebooks:
+
+```python
+import src
+
+from src import embed, k_nearest, build_prompt, load_decl_types
+
+results = k_nearest("∀ n m : ℕ, n + m = m + n", k=5)
+for name, distance in results:
+    print(f"{distance:.3f}  {name}")
+
+neighbours = [name for name, _ in results]
+prompt = build_prompt("∀ n m : ℕ, n + m = m + n", neighbours)
+print(prompt)
+```
+
+**Note:** To use the full functionality of RAG-Prover, you need:
+1. The FAISS index file at `datasets/mathlib4_hnsw.faiss`
+2. The names file at `datasets/mathlib4_hnsw.names.npy`
+3. An OpenAI API key set as the `OPENAI_API_KEY` environment variable
+
+See `test_notebook.ipynb` for a complete example.
 
 ## Limitations 🚩
 As of August 2025, <code>lean-prover</code> is not publicly available for download as a package.
