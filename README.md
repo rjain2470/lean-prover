@@ -45,7 +45,7 @@ theorem statement : ∀ n m : ℕ, n + m = m + n := by
 
 ### Installation ✨
 
-#### Option 1: Install from Source (Recommended for Development)
+#### Option 1: Install from Source (Recommended)
 
 1. Clone the repository:
 ```bash
@@ -58,21 +58,12 @@ cd rag-prover
 pip install .
 ```
 
-#### Option 2: Install in Editable Mode (for Development)
+#### Option 2: Install in Editable Mode
 ```bash
 pip install -e .
 ```
 
-The package will install all required dependencies automatically, including:
-- aiofiles
-- numpy
-- openai
-- tiktoken
-- torch
-- tqdm
-- transformers
-- matplotlib
-- faiss-cpu
+The package will install all required dependencies automatically.
 
 ### Using RAG-Prover in Jupyter Notebooks 📓
 
@@ -92,15 +83,13 @@ prompt = build_prompt("∀ n m : ℕ, n + m = m + n", neighbours)
 print(prompt)
 ```
 
-**Note:** To use the full functionality of RAG-Prover, you need:
-1. The FAISS index file at `datasets/mathlib4_hnsw.faiss`
-2. The names file at `datasets/mathlib4_hnsw.names.npy`
-3. An OpenAI API key set as the `OPENAI_API_KEY` environment variable
-
 See `test_notebook.ipynb` for a complete example.
 
 ## Limitations 🚩
-As of August 2025, <code>lean-prover</code> is not publicly available for download as a package.
+To use the full functionality of RAG-Prover, you need:
+1. The FAISS index file at `datasets/mathlib4_hnsw.faiss`
+2. The names file at `datasets/mathlib4_hnsw.names.npy`
+3. An OpenAI API key set as the `OPENAI_API_KEY` environment variable
 
 ## License ⚖️
 Distributed under the MIT License. See LICENSE.txt for more information.
