@@ -8,3 +8,6 @@ torch>=2.0.0
 matplotlib>=3.7.0
 transformers>=4.30.0
 pyzmq>=20.0.0
+tensorflow==2.11.0
+h5py>=2.9.0
+wrapt>=1.11.0
