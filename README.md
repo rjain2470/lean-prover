@@ -85,6 +85,23 @@ print(prompt)
 
 See `test_notebook.ipynb` for a complete example.
 
+### Large File Usage
+
+This repository uses **Git LFS** (Large File Storage) to manage the following large binary files:
+- `datasets/mathlib4_hnsw.faiss` (~320MB)
+- `datasets/vecs.f32` (~320MB)
+
+These store the embedding of mathlib4 into Euclidean space. To ensure large files are correctly downloaded, make sure Git LFS is installed:
+1. [Install Git LFS](https://git-lfs.github.com/) for your platform.
+2. Clone the repository as usual:
+   ```bash
+   git clone https://github.com/rjain2470/rag-prover.git
+   cd rag-prover
+   ```
+Git LFS will automatically download the large files. If you don’t want to use Git LFS, you can manually download the large files from Google Drive and place them in the `datasets/` directory:
+- [mathlib4_hnsw.faiss (Google Drive)](https://drive.google.com/file/d/<file-id-faiss>/view?usp=sharing)
+- [vecs.f32 (Google Drive)](https://drive.google.com/file/d/<file-id-vectors>/view?usp=sharing)
+
 ## Limitations 🚩
 To use the full functionality of RAG-Prover, you need:
 1. The FAISS index file at `datasets/mathlib4_hnsw.faiss`
