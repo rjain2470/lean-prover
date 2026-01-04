@@ -7,3 +7,5 @@ tqdm==4.66.2
 torch>=2.0.0
 matplotlib>=3.7.0
 transformers>=4.30.0
+pyodbc==4.0.35
+pyzmq==20.0.0
