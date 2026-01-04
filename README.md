@@ -98,9 +98,7 @@ These store the embedding of mathlib4 into Euclidean space. To ensure large file
    git clone https://github.com/rjain2470/rag-prover.git
    cd rag-prover
    ```
-Git LFS will automatically download the large files. If you don’t want to use Git LFS, you can manually download the large files from Google Drive and place them in the `datasets/` directory:
-- [mathlib4_hnsw.faiss (Google Drive)](https://drive.google.com/file/d/<file-id-faiss>/view?usp=sharing)
-- [vecs.f32 (Google Drive)](https://drive.google.com/file/d/<file-id-vectors>/view?usp=sharing)
+Git LFS will automatically download the large files. 
 
 ## Limitations 🚩
 To use the full functionality of RAG-Prover, you need:
