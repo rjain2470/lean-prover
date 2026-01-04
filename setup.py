@@ -15,7 +15,8 @@ setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/rjain2470/rag-prover",
-    packages=find_packages(),
+    packages=find_packages(where="src"),  # Look for packages in the 'src' directory
+    package_dir={"": "src"},  # Root package directory is 'src'
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
